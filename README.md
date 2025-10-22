@@ -1,29 +1,24 @@
-# 🎯 TaskCraft – Premium Minimal Task Management
+🎯 TaskCraft – Minimal Task Management App
 
-> **“Less, but better.”**  
-> Inspired by Dieter Rams’ design and modern iconography.
+TaskCraft is a modern, real-time task management application built with React, Django REST API, and PostgreSQL, designed for efficient task creation, tracking, and completion.
 
-TaskCraft is a real-time, modern task management app blending German industrial minimalism (Dieter Rams) with premium UI, built with React, Django REST API, and PostgreSQL.
+✨ Features
 
----
+Add, Edit, Delete Tasks – Full CRUD functionality with real-time updates
 
-## ✨ Features
+Mark as Done / Undo – Completed tasks can be hidden and restored
 
-- **Stunning Premium UI-** Clean, modern, isometric-inspired visuals (Dieter Rams × Airbnb 2024 style)
-- **Add, Edit, Delete Tasks-** Full CRUD with real-time optimistic updates
-- **Due Date & Priority-** Set, view, and sort by priority and due date/time
-- **Category Organization-** Assign tasks to categories (Work, Personal, Learning, etc)
-- **Mark as Done/Undo-** Hide completed items with UNDO
-- **Live Stats & Filtering-** Instantly see overdue, complete, and today’s tasks
-- **Fully Responsive-** App-quality UX on mobile, tablet, desktop
-- **Fast-** Lightning-quick React frontend, efficient Django/Pg backend
-- **Dockerized-** Easily run full stack with Docker Compose
+Priority & Due Date – Assign priority levels and due dates for tasks
 
----
+Category Organization – Categorize tasks for better management
 
-## 🏗️ Project Structure
+Live Stats & Filtering – Filter tasks by status, due date, or category
 
-```
+Responsive Design – Works on mobile, tablet, and desktop
+
+Dockerized – Easy deployment with Docker Compose
+
+🏗️ Project Structure
 TaskCraft/
 ├── frontend/          # React + Vite (port 5173)
 │   ├── src/components/
@@ -38,158 +33,105 @@ TaskCraft/
 │   ├── tasks/
 │   │      models.py, serializers.py, views.py, urls.py
 │   └── manage.py
-├── docker-compose.yml # All-in-one orchestration
-```
+├── docker-compose.yml # Orchestration of all components
 
----
+🚀 Quick Start
+Prerequisites
 
-## 🚀 Quick Start
+Node.js 18+
 
-### Prerequisites
+Python 3.10+
 
-- Node.js 18+ (`node -v`)
-- Python 3.10+ (`python --version`)
-- PostgreSQL 14+ (working locally, or Docker)
+PostgreSQL 14+ (local or Docker)
 
-### 1. Clone the Repo
-
-```bash
+1. Clone the Repository
 git clone <repository-url>
 cd TaskCraft
-```
 
-### 2. Backend Setup
-
-```bash
+2. Backend Setup
 cd backend
 pip install -r requirements.txt
-# Fill or update `.env` for database settings
+# Configure `.env` for database settings
 python manage.py migrate
 python manage.py runserver 0.0.0.0:8000
-```
 
-### 3. Frontend Setup
-
-```bash
+3. Frontend Setup
 cd ../frontend
 npm install
 npm run dev
-```
 
-### 4. Use the App
+4. Access the App
 
-- **Frontend-** http://localhost:5173
-- **API-** http://localhost:8000/api/
-- **Admin (optional)-** http://localhost:8000/admin/
+Frontend: http://localhost:5173
 
----
+API: http://localhost:8000/api/
 
-## 🐳 Docker Deployment
+🐳 Docker Deployment
 
-**One-liner to run all-**
-```bash
+Run all components with one command:
+
 docker-compose up --build
-```
 
-- **Frontend-** port 5173
-- **Backend API-** port 8000
-- **Postgres-** port 5432
-- Stop- `docker-compose down`
 
----
+Frontend: port 5173
 
-## 📊 Database Schema
+Backend API: port 8000
 
-**tasks_task table**
-| Field        | Type         | Notes                      |
-| ------------ | ------------ | -------------------------- |
-| id           | SERIAL PK    |                            |
-| title        | VARCHAR(255) |                            |
-| description  | TEXT (null)  | optional                   |
-| is_completed | BOOLEAN      | default False              |
-| priority     | VARCHAR(10)  | low/medium/high/urgent     |
-| category     | VARCHAR(20)  | work/personal/…            |
-| due_date     | TIMESTAMP    | nullable                   |
-| created_at   | TIMESTAMP    | default now                |
-| updated_at   | TIMESTAMP    | auto updated               |
+PostgreSQL: port 5432
 
----
+Stop containers:
 
-## 🔌 Main API Endpoints
+docker-compose down
 
-| Endpoint                       | Description                      |
-| ------------------------------ | -------------------------------- |
-| `GET /api/tasks/`              | Latest uncompleted tasks (paged) |
-| `POST /api/tasks/`             | Create new task                  |
-| `PATCH /api/tasks/<id>/done/`  | Mark as done                     |
-| `PATCH /api/tasks/<id>/undo/`  | Undo done                        |
-| `PATCH /api/tasks/<id>/`       | Edit task                        |
-| `DELETE /api/tasks/<id>/`      | Delete task                      |
-| `GET /api/tasks/completed/`    | Only completed                   |
-| `GET /api/tasks/overdue/`      | Only overdue, incomplete         |
+📊 Database Schema
 
-**Pagination/search/sort supported by DRF.**
+tasks_task table
 
----
-
-## 🎨 Visual Design
-
-- **Design Language-** Dieter Rams × Airbnb, modern isometric emojis/icons
-- **Palette-** Warm grays, whites, soft primary accents
-- **Layout-** Minimal, tactile, subtle glass and shadow; natural-rounded cards
-- **Responsive-** Optimizes for all screen sizes
-- **Footer/Header-** Premium, minimal, always visible
-
----
-
-## 🧪 Testing
-
-### Backend
-
-```bash
+Field	Type	Notes
+id	SERIAL PK	
+title	VARCHAR(255)	
+description	TEXT	Optional
+is_completed	BOOLEAN	Default: False
+priority	VARCHAR(10)	low/medium/high/urgent
+category	VARCHAR(20)	work/personal/...
+due_date	TIMESTAMP	Nullable
+created_at	TIMESTAMP	Default: now
+updated_at	TIMESTAMP	Auto-updated
+🔌 Main API Endpoints
+Endpoint	Description
+GET /api/tasks/	Latest uncompleted tasks (paged)
+POST /api/tasks/	Create new task
+PATCH /api/tasks/<id>/done/	Mark as done
+PATCH /api/tasks/<id>/undo/	Undo done
+PATCH /api/tasks/<id>/	Edit task
+DELETE /api/tasks/<id>/	Delete task
+GET /api/tasks/completed/	Only completed tasks
+GET /api/tasks/overdue/	Only overdue tasks
+🧪 Testing
+Backend
 python manage.py test
-```
 
-### Frontend
-
-```bash
+Frontend
 npm test
-```
 
----
+🔧 Environment Variables
 
-## 🔧 Environment Variables
+Create a backend/.env file:
 
-Create a `backend/.env` (or configure in settings):
-
-```
 DEBUG=1
 DB_NAME=todo_db
 DB_USER=postgres
 DB_PASSWORD=yourpassword
 DB_HOST=localhost
 DB_PORT=5432
-```
-For Docker, these are set in `docker-compose.yml`.
-
----
-
-## 📱 Mobile & Accessibility
-
-- **Touch-** All actions easily performed by tap/long-press
-- **Keyboard-** Full navigation
-- **Responsive UI-** Adapts layout for narrow screens
-
----
-
-## 🙏 Credits
-
-- Dieter Rams (“Less, but better” inspiration)
-- Airbnb design language
-- Django, React, PostgreSQL communities
-- Tailwind CSS
-
----
 
 
-**Built with ❤️ by Sangavi – TaskCraft- Where elegance meets efficiency.**
+Docker-compose sets these variables automatically.
+
+📱 Accessibility & Mobile
+
+Fully responsive for all screen sizes
+
+Supports touch and keyboard navigation
+
+Built with ❤️ by Sangavi – TaskCraft
