@@ -1,0 +1,12 @@
+# Node/Vite
+node_modules/
+build/
+dist/
+dist-ssr/
+*.log
+.env
+.env.*
+*.env
+
+# Editor/IDE
+.vscode/

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+venv/
+ENV/
+.env
+.env.*
+*.env
+
+# Django
+*.log
+staticfiles/
+
+# Node
+node_modules/
+dist/
+build/
+.cache/
+yarn.lock
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+*.bak
+
+# VSCode/settings
+.vscode/
+
+# Docker
+*.pid
+
+# Misc
+*.swp
+
+# Ignore local database and media files
+backend/db.sqlite3
+backend/media/

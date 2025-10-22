@@ -1,0 +1,16 @@
+# Django/Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+.env
+.env.*
+*.env
+*.log
+
+# Migration backups
+*.bak
+
+# Editor/IDE
+.vscode/
