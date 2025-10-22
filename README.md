@@ -191,10 +191,5 @@ For Docker, these are set in `docker-compose.yml`.
 
 ---
 
-## 📄 License
-
-MIT License. See [LICENSE](LICENSE).
-
----
 
 **Built with ❤️ by Sangavi – TaskCraft: Where elegance meets efficiency.**
