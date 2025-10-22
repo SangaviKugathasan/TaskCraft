@@ -9,15 +9,15 @@ TaskCraft is a real-time, modern task management app blending German industrial 
 
 ## ✨ Features
 
-- **Stunning Premium UI:** Clean, modern, isometric-inspired visuals (Dieter Rams × Airbnb 2024 style)
-- **Add, Edit, Delete Tasks:** Full CRUD with real-time optimistic updates
-- **Due Date & Priority:** Set, view, and sort by priority and due date/time
-- **Category Organization:** Assign tasks to categories (Work, Personal, Learning, etc)
-- **Mark as Done/Undo:** Hide completed items with UNDO
-- **Live Stats & Filtering:** Instantly see overdue, complete, and today’s tasks
-- **Fully Responsive:** App-quality UX on mobile, tablet, desktop
-- **Fast:** Lightning-quick React frontend, efficient Django/Pg backend
-- **Dockerized:** Easily run full stack with Docker Compose
+- **Stunning Premium UI-** Clean, modern, isometric-inspired visuals (Dieter Rams × Airbnb 2024 style)
+- **Add, Edit, Delete Tasks-** Full CRUD with real-time optimistic updates
+- **Due Date & Priority-** Set, view, and sort by priority and due date/time
+- **Category Organization-** Assign tasks to categories (Work, Personal, Learning, etc)
+- **Mark as Done/Undo-** Hide completed items with UNDO
+- **Live Stats & Filtering-** Instantly see overdue, complete, and today’s tasks
+- **Fully Responsive-** App-quality UX on mobile, tablet, desktop
+- **Fast-** Lightning-quick React frontend, efficient Django/Pg backend
+- **Dockerized-** Easily run full stack with Docker Compose
 
 ---
 
@@ -78,29 +78,29 @@ npm run dev
 
 ### 4. Use the App
 
-- **Frontend:** http://localhost:5173
-- **API:** http://localhost:8000/api/
-- **Admin (optional):** http://localhost:8000/admin/
+- **Frontend-** http://localhost:5173
+- **API-** http://localhost:8000/api/
+- **Admin (optional)-** http://localhost:8000/admin/
 
 ---
 
 ## 🐳 Docker Deployment
 
-**One-liner to run all:**
+**One-liner to run all-**
 ```bash
 docker-compose up --build
 ```
 
-- **Frontend:** port 5173
-- **Backend API:** port 8000
-- **Postgres:** port 5432
-- Stop: `docker-compose down`
+- **Frontend-** port 5173
+- **Backend API-** port 8000
+- **Postgres-** port 5432
+- Stop- `docker-compose down`
 
 ---
 
 ## 📊 Database Schema
 
-**tasks_task table:**
+**tasks_task table**
 | Field        | Type         | Notes                      |
 | ------------ | ------------ | -------------------------- |
 | id           | SERIAL PK    |                            |
@@ -134,11 +134,11 @@ docker-compose up --build
 
 ## 🎨 Visual Design
 
-- **Design Language:** Dieter Rams × Airbnb, modern isometric emojis/icons
-- **Palette:** Warm grays, whites, soft primary accents
-- **Layout:** Minimal, tactile, subtle glass and shadow; natural-rounded cards
-- **Responsive:** Optimizes for all screen sizes
-- **Footer/Header:** Premium, minimal, always visible
+- **Design Language-** Dieter Rams × Airbnb, modern isometric emojis/icons
+- **Palette-** Warm grays, whites, soft primary accents
+- **Layout-** Minimal, tactile, subtle glass and shadow; natural-rounded cards
+- **Responsive-** Optimizes for all screen sizes
+- **Footer/Header-** Premium, minimal, always visible
 
 ---
 
@@ -176,9 +176,9 @@ For Docker, these are set in `docker-compose.yml`.
 
 ## 📱 Mobile & Accessibility
 
-- **Touch:** All actions easily performed by tap/long-press
-- **Keyboard:** Full navigation
-- **Responsive UI:** Adapts layout for narrow screens
+- **Touch-** All actions easily performed by tap/long-press
+- **Keyboard-** Full navigation
+- **Responsive UI-** Adapts layout for narrow screens
 
 ---
 
@@ -192,4 +192,4 @@ For Docker, these are set in `docker-compose.yml`.
 ---
 
 
-**Built with ❤️ by Sangavi – TaskCraft: Where elegance meets efficiency.**
+**Built with ❤️ by Sangavi – TaskCraft- Where elegance meets efficiency.**
